@@ -1,0 +1,6 @@
+<ul>
+  <% @tags.each do |tag| %>
+    <li><%= tag.name %> || <%= link_to 'Show', tag %> || <%= link_to 'Edit', edit_tag_path(tag) %> </li>
+    <% end %>
+  </ul>
+<br>

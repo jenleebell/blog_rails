@@ -8,6 +8,8 @@
   <%= f.label :content %>
   <%= f.text_field :content %>
   <br>
+  <%= f.label :tag_ids, "Tags" %>
+  <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) %>
   <br>
   <%= f.submit 'Submit', class:'btn btn-success' %>
 <% end %>

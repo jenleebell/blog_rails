@@ -1,8 +1,22 @@
 <div class="col-md-8">
-  <ul>
+  <div class="posts">
     <% @posts.each do |post| %>
-      <li><%= link_to post.title, post_path(post) %></li>
+    <%= link_to post.title, post_path(post) %> by <%= post.author %>
+    <br>
+    <br>
     <% end %>
-  </ul>
-  <%= link_to 'add new post', new_post_path() %>
+    <%= link_to 'add new post', new_post_path() %>
+  </div>
+</div>
+
+<div class="col-md-4">
+  <p>
+    <h3>search for posts by tag</h3>
+    <ul>
+      <% @tags.each do |tag| %>
+        <li><%= link_to tag.name, tag %></li>
+        <% end %>
+      </ul>
+    <br>
+  </p>
 </div>

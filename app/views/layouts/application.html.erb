@@ -10,6 +10,16 @@
   <div class="logo-area">
     <span class="logo">climbeginners</span>
   </div>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div>
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Home', posts_path() %></li>
+        <li><%= link_to 'add new post', new_post_path() %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 <%= yield %>
 
 </body>

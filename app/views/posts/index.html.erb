@@ -5,18 +5,18 @@
     <br>
     <br>
     <% end %>
-    <%= link_to 'add new post', new_post_path() %>
   </div>
 </div>
 
 <div class="col-md-4">
+  <div class="tag-section">
   <p>
-    <h3>search for posts by tag</h3>
-    <ul>
-      <% @tags.each do |tag| %>
-        <li><%= link_to tag.name, tag %></li>
-        <% end %>
-      </ul>
+    <h3>click a tag || see all its posts</h3>
+    <p><%= link_to "Add a new Tag", new_tag_path() %>
+    </p>
+    <% @tags.each do |tag| %>
+      <%= link_to tag.name, tag %><br>
+    <% end %>
     <br>
-  </p>
+  </div>
 </div>
